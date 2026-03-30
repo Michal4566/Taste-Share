@@ -1,0 +1,75 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="20dp"
+            android:gravity="center_horizontal">
+
+            <!-- Recipe Title -->
+            <com.google.android.material.textview.MaterialTextView
+                style="@style/TitleTextViewStyle"
+                android:layout_gravity="center"
+                android:layout_marginVertical="16dp"
+                android:text="@string/recipe_name" />
+
+            <!-- Image and Info Layout in Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="@color/primary"
+                app:cardElevation="4dp"
+                app:shapeAppearanceOverlay="@style/RoundedCardAppearance">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/recipe_image_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_recipe_image" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/TitleTextViewStyle"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/ingredients_and_recipe"
+                        android:layout_gravity="center"/>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/recipe_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recipe_example"
+                        android:textColor="@color/text_primary"
+                        android:layout_marginHorizontal="12dp"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        layout="@layout/bottom_navigation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

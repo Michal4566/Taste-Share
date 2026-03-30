@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+        <!-- Title -->
+        <TextView
+            style="@style/TitleTextViewStyle"
+            android:text="@string/new_recipe_title" />
+
+        <!-- Recipe Name Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutRoundedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="@string/recipe_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/recipe_name"
+                style="@style/EditTextPrimaryStyle"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Image and Info Layout in Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardElevation="4dp"
+            app:shapeAppearanceOverlay="@style/RoundedCardAppearance">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <!-- Recipe Image with Change Icon -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp">
+
+                    <ImageView
+                        android:id="@+id/recipe_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_recipe_image" />
+
+                    <!-- Change Photo Icon --> <!-- ikona do poprawy  -->
+                    <ImageView
+                        android:id="@+id/change_photo_icon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="top|end"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/ic_pencil_with_border"
+                        android:contentDescription="@string/change_photo" />
+                </FrameLayout>
+
+                <!-- Recipe Info Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="4dp"
+                    android:paddingTop="8dp">
+
+                    <!-- Difficulty Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/difficulty_filter_label"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end|center_vertical">
+
+                            <TextView
+                                style="@style/PrimaryTextViewStyle"
+                                android:textSize="16sp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/difficulty_filter"
+                                android:gravity="end|center_vertical"
+                                tools:ignore="NestedWeights" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/ic_pencil"
+                                app:tint="@color/text_primary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/difficulty_filter_value"
+                            style="@style/SecondaryTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:gravity="start|center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/none" />
+                    </LinearLayout>
+
+                    <!-- Diet Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/diet_filter_label"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end|center_vertical">
+
+                            <TextView
+                                style="@style/PrimaryTextViewStyle"
+                                android:textSize="16sp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/diet_filter"
+                                android:gravity="end|center_vertical"
+                                tools:ignore="NestedWeights" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/ic_pencil"
+                                app:tint="@color/text_primary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/diet_filter_value"
+                            style="@style/SecondaryTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:gravity="start|center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/none" />
+                    </LinearLayout>
+
+                    <!-- Health Preferences Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/health_filter_label"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end|center_vertical">
+
+                            <TextView
+                                style="@style/PrimaryTextViewStyle"
+                                android:textSize="16sp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/health_filter"
+                                android:gravity="end|center_vertical"
+                                tools:ignore="NestedWeights" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/ic_pencil"
+                                app:tint="@color/text_primary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/health_filter_value"
+                            style="@style/SecondaryTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:gravity="start|center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/none" />
+                    </LinearLayout>
+
+                    <!-- Cuisine Type Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/cuisine_filter_label"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end|center_vertical">
+
+                            <TextView
+                                style="@style/PrimaryTextViewStyle"
+                                android:textSize="16sp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/cuisine_filter"
+                                android:gravity="end|center_vertical"
+                                tools:ignore="NestedWeights" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/ic_pencil"
+                                app:tint="@color/text_primary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/cuisine_filter_value"
+                            style="@style/SecondaryTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:gravity="start|center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/none" />
+                    </LinearLayout>
+
+                    <!-- Meal Type Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/meal_type_label"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end|center_vertical">
+
+                            <TextView
+                                style="@style/PrimaryTextViewStyle"
+                                android:textSize="16sp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/meal_filter"
+                                android:gravity="end|center_vertical"
+                                tools:ignore="NestedWeights" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/ic_pencil"
+                                app:tint="@color/text_primary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/meal_type_value"
+                            style="@style/SecondaryTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:gravity="start|center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/none" />
+                    </LinearLayout>
+
+                    <!-- Dish Type Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/dish_type_label"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end|center_vertical">
+
+                            <TextView
+                                style="@style/PrimaryTextViewStyle"
+                                android:textSize="16sp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/dish_filter"
+                                android:gravity="end|center_vertical"
+                                tools:ignore="NestedWeights" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/ic_pencil"
+                                app:tint="@color/text_primary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/dish_type_value"
+                            style="@style/SecondaryTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:gravity="start|center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/none" />
+                    </LinearLayout>
+
+                    <!-- Time Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/time_label"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end|center_vertical">
+
+                            <TextView
+                                style="@style/PrimaryTextViewStyle"
+                                android:textSize="16sp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/time"
+                                android:gravity="end|center_vertical"
+                                tools:ignore="NestedWeights" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/ic_pencil"
+                                app:tint="@color/text_primary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/time_value"
+                            style="@style/SecondaryTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:gravity="start|center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/none" />
+                    </LinearLayout>
+
+                    <!-- Calories Row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <LinearLayout
+                            android:id="@+id/calories_label"
+                            android:layout_width="0dp"
+                            android:layout_weight="2"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="end|center_vertical">
+
+                            <TextView
+                                style="@style/PrimaryTextViewStyle"
+                                android:textSize="16sp"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/calories"
+                                android:gravity="end|center_vertical"
+                                tools:ignore="NestedWeights" />
+
+                            <ImageView
+                                android:layout_width="16dp"
+                                android:layout_height="16dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@drawable/ic_pencil"
+                                app:tint="@color/text_primary" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/calories_value"
+                            style="@style/SecondaryTextViewStyle"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:gravity="start|center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="0dp"
+                            android:text="@string/none" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Ingredients Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardElevation="4dp"
+            app:shapeAppearanceOverlay="@style/RoundedCardAppearance">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/PrimaryTextViewStyle"
+                    android:layout_width="wrap_content"
+                    android:text="@string/ingredients"
+                    android:layout_marginBottom="6dp" />
+
+                <!-- Placeholder for ingredient list, dynamically added here -->
+                <LinearLayout
+                    android:id="@+id/ingredients_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical" />
+
+                <!-- Button to Add New Ingredient -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/add_ingredient_button"
+                    style="@style/SecondaryActionButtonStyle"
+                    android:backgroundTint="@color/background"
+                    android:text="@string/new_ingredient"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Recipe Instructions Section -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardElevation="4dp"
+            app:shapeAppearanceOverlay="@style/RoundedCardAppearance">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    style="@style/PrimaryTextViewStyle"
+                    android:text="@string/recipe" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayoutRoundedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:shapeAppearance="@style/ShapeAppearance.MaterialComponents.MediumComponent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/recipe_instructions"
+                        android:hint="@string/enter_recipe_instructions"
+                        android:inputType="textMultiLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minLines="5" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="20dp" >
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/delete_recipe_button"
+                style="@style/ActionButtonStyle"
+                android:backgroundTint="@color/error"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/delete_recipe"/>
+
+
+            <!-- Save Recipe Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_recipe_button"
+                style="@style/ActionButtonStyle"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginHorizontal="4dp"
+                android:text="@string/save_recipe"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

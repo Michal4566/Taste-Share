@@ -1,0 +1,82 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        style="@style/CenteredLayoutStyle"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo_drawable" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/MainTextViewStyle"
+            android:text="@string/app_name" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutRoundedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_email"
+                style="@style/EditTextPrimaryStyle"
+                android:hint="@string/email"
+                android:drawableStart="@drawable/ic_email"
+                android:drawableTint="@color/text_secondary"
+                android:drawablePadding="12sp"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutRoundedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/login_password"
+                style="@style/EditTextPrimaryStyle"
+                android:hint="@string/password"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawableTint="@color/text_secondary"
+                android:drawablePadding="12sp"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button"
+            style="@style/ActionButtonStyle"
+            android:text="@string/log_in"
+            android:layout_marginTop="40dp"
+            android:textSize="18sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/google_sign_in_button"
+            style="@style/ActionButtonStyle"
+            android:text="@string/log_in_google"
+            app:icon="@drawable/ic_google"
+            app:iconGravity="textStart"
+            app:iconPadding="8sp"
+            app:iconTint="@null"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            app:iconSize="24dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/create_account"
+            style="@style/SecondaryTextViewStyle"
+            android:text="@string/sign_in" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/forgot_password"
+            style="@style/ActionTextViewStyle"
+            android:text="@string/forgot_password" />
+
+    </LinearLayout>
+</ScrollView>

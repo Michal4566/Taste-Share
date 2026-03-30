@@ -1,0 +1,37 @@
+<!-- ingredient_item.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ingredient_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginVertical="4dp"
+    android:padding="8dp"
+    android:background="@drawable/ingredient_background"
+    android:gravity="center_vertical">
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/ingredient_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:buttonTint="@null" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/ingredient_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/ingredient_placeholder"
+        android:textColor="@color/text_primary"
+        style="@style/PrimaryTextViewStyle"
+        android:paddingStart="8dp" />
+
+    <ImageView
+        android:id="@+id/edit_ingredient_icon"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:src="@drawable/ic_pencil"
+        app:tint="@color/text_primary"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/edit_ingredient" />
+</LinearLayout>

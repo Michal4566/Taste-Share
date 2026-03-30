@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Style for rounded edges -->
+    <style name="RoundedShapeAppearance" parent="ShapeAppearance.MaterialComponents">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">200dp</item>
+    </style>
+
+    <!-- Style for centered layout -->
+    <style name="CenteredLayoutStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">?attr/colorSurface</item> <!-- MD3 Surface Color -->
+        <item name="android:padding">16dp</item>
+    </style>
+
+    <!-- Style for EditText within TextInputLayout (MD3) -->
+    <style name="EditTextPrimaryStyle" parent="Widget.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColorHint">@color/text_secondary</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- TextInputLayout Style (Wrapper for EditText) -->
+    <style name="TextInputLayoutRoundedStyle" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_stroke_color</item>
+        <item name="hintTextColor">@color/text_secondary</item>
+        <item name="boxStrokeErrorColor">@color/error</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="shapeAppearance">@style/RoundedShapeAppearance</item>
+    </style>
+
+
+    <!-- Style for Main TextView (App Name) -->
+    <style name="MainTextViewStyle" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Style for Page Title's TextViews -->
+    <style name="TitleTextViewStyle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Style for Action TextViews (e.g., Forgot Password) -->
+    <style name="ActionTextViewStyle" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Primary TextView Style -->
+    <style name="PrimaryTextViewStyle" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Secondary TextView Style -->
+    <style name="SecondaryTextViewStyle" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Style for Primary Action Button -->
+    <style name="ActionButtonStyle" parent="Widget.Material3.Button">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/accent</item>
+        <item name="android:textColor">@color/background</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <!-- Style for Secondary Action Button -->
+    <style name="SecondaryActionButtonStyle" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <!-- General Button Style -->
+    <style name="ButtonStyle" parent="Widget.Material3.Button.TextButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- Style for SortBy Spinner -->
+    <style name="SortBySpinnerStyle" parent="Widget.AppCompat.Spinner">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:backgroundTint">@color/accent</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <!-- Filter TextView Style -->
+    <style name="FilterTextViewStyle" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!-- Filter Container Style -->
+    <style name="FilterContainerStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <!-- Dialog Style -->
+    <style name="CustomAlertDialogTheme" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="colorControlActivated">@color/accent</item>
+        <item name="android:colorControlActivated">@color/accent</item>
+        <item name="buttonBarPositiveButtonStyle">@style/DialogButtonAccentColor</item>
+        <item name="buttonBarNegativeButtonStyle">@style/DialogButtonAccentColor</item>
+        <item name="buttonBarNeutralButtonStyle">@style/DialogButtonAccentColor</item>
+    </style>
+
+    <style name="CustomAlertDialogThemeWithRedNegativeButton" parent="CustomAlertDialogTheme">
+        <item name="buttonBarNegativeButtonStyle">@style/DialogButtonRedColor</item>
+    </style>
+
+    <style name="CustomAlertDialogAreYouSure" parent="CustomAlertDialogTheme">
+        <item name="buttonBarPositiveButtonStyle">@style/DialogButtonRedColor</item>
+    </style>
+
+    <!-- Dialog Button Style -->
+    <style name="DialogButtonAccentColor" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/accent</item>
+    </style>
+
+    <style name="DialogButtonRedColor" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/error</item>
+    </style>
+
+    <!-- Custom style for fully rounded corners in MaterialCardView -->
+    <style name="RoundCardAppearance" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Custom Rounded Card Appearance -->
+    <style name="RoundedCardAppearance" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+
+</resources>

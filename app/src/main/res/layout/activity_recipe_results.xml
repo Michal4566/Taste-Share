@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <LinearLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/background"
+            android:elevation="4dp"
+            android:padding="16dp">
+
+            <!-- Title -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/page_title_text_view"
+                style="@style/TitleTextViewStyle"
+                android:text="@string/page_title_placeholder"
+                android:textAppearance="?attr/textAppearanceHeadlineMedium" />
+
+            <!-- Secondary TextView (e.g. for ingredients) -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/secondary_text_view"
+                style="@style/SecondaryTextViewStyle"
+                android:text="@string/example_ingredients"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="?attr/textAppearanceBodyLarge" />
+
+            <!-- Sort Spinner -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SortBySpinnerStyle"
+                app:boxStrokeColor="@color/accent">
+
+                <Spinner
+                    android:id="@+id/sort_by_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/accent"
+                    android:popupBackground="@null"
+                    android:background="@android:color/transparent" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <!-- RecyclerView for showing recipes -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recipe_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="16sp"
+            android:layout_gravity="top|start" />
+
+    </FrameLayout>
+
+    <!-- Navbar pined to the bottom -->
+    <include
+        layout="@layout/bottom_navigation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

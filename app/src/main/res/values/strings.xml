@@ -1,0 +1,213 @@
+<resources>
+    <string name="app_name">TasteShare</string>
+
+    <!-- common -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="close">Close</string>
+    <string name="submit">Submit</string>
+
+    <string name="no_data">No Data</string>
+    <string name="none">None</string>
+
+    <string name="page_title_placeholder">Page Title</string>
+    <string name="example_ingredients">tomatoes, water</string>
+
+    <string name="change_photo">Change Photo</string>
+    <string name="add_to_favourite">Add to favourite</string>
+
+    <string name="lorem_ipsum_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="lorem_ipsum_2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et magna non neque ornare convallis at vel tellus.</string>
+    <string name="lorem_ipsum_3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et magna non neque ornare convallis at vel tellus. Ut a tempus sapien, ut semper nisl.</string>
+
+    <!-- onboarding -->
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_slide_welcome">Welcome to TasteShare! Discover recipes perfectly tailored to your ingredients and culinary preferences.</string>
+    <string name="onboarding_slide_search">Find exactly what you need with advanced filters and Gemini™ technology.</string>
+    <string name="onboarding_slide_last">Create your own recipes, share them with others, and enhance your culinary skills with TasteShare!</string>
+
+    <!-- login & register page -->
+    <string name="login">Username</string>
+    <string name="email">E-mail</string>
+    <string name="password">Password</string>
+    <string name="password_repeat">Repeat Password</string>
+
+    <string name="log_in">Log In</string>
+    <string name="log_in_google">Log In with Google</string>
+    <string name="sign_in">Create Account</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+
+    <!-- user profile page -->
+    <string name="logout">Logout</string>
+    <string name="email_example">user@example.com</string>
+    <string name="view_user_recipes">Show User Recipes</string>
+
+    <string name="new_username_hint">New username</string>
+
+    <!-- navbar -->
+    <string name="search">Search</string>
+    <string name="cart">Cart</string>
+    <string name="favorites">Favorites</string>
+    <string name="profile">Profile</string>
+
+    <!-- search page -->
+    <string name="insert_ingredients_default">Type your Ingredients (e.g. tomatoes, water)</string>
+    <string name="image_option_button">Use Image for Recipe</string>
+    <string name="auto_fill_by_image">Auto Fill Ingredients by Image</string>
+
+    <string name="filter_default">Any</string>
+
+    <string name="difficulty_filter">Difficulty</string>
+    <string name="diet_filter">Diet</string>
+    <string name="health_filter">Health Preferences</string>
+    <string name="cuisine_filter">Cuisine Type</string>
+    <string name="meal_filter">Meal Type</string>
+    <string name="time_filter">Max Time</string>
+    <string name="dish_filter">Dish Type</string>
+    <string name="difficulty">Difficulty</string>
+
+    <string name="new_recipe">Add New Recipe</string>
+
+    <string name="generate_recipe_by_ingredients">Generate Recipe</string>
+    <string name="generate_recipe_by_photo">Generate Recipe From Image</string>
+
+    <string name="search_recipe">Search Recipe</string>
+    <string name="search_api">Search in API</string>
+    <string name="your_favorites">Your Favorites</string>
+
+    <string name="section_title">Section Title</string>
+    <string name="recipe_image_desc">Recipe Image</string>
+
+    <!-- recipe page -->
+    <string name="recipe_name">Recipe Name</string>
+    <string name="ingredients_example">• 500g tomatoes\n• 3 eggs\n• 1 onion\n• 1 tbsp olive oil</string>
+    <string name="recipe_example">Lorem Ipsum</string>
+    <string name="show_diet_n_health_tags">Show diet and health tags</string>
+    <string name="add_to_list">Add to shopping list</string>
+    <string name="calories">Calories</string>
+    <string name="time">Time</string>
+
+    <string name="ingredients_and_recipe">Ingredients and Recipe</string>
+    <string name="recipe_link">Recipe step-by-step website</string>
+
+    <string name="diet_example">Balanced, Low-sodium</string>
+    <string name="health_pref_example">Vegan, Vegetarian</string>
+    <string name="cuisine_example">Asian, Italian</string>
+    <string name="meal_example">Lunch, Dinner</string>
+    <string name="dish_example">Main Course, Side Dish</string>
+    <string name="time_example">30 min</string>
+    <string name="calories_example">350 kcal</string>
+
+        <!-- comment section -->
+        <string name="comments_section_title">Comment Section</string>
+        <string name="write_a_comment_button">Write a comment</string>
+        <string name="user_avatar">Users Avatar</string>
+        <string name="username">Users Name</string>
+        <string name="edit_comment">Edit Comment</string>
+        <string name="load_more_comments_button">Load More</string>
+
+        <!-- rating section -->
+        <string name="rate_recipe_title">Rate Recipe</string>
+        <string name="star_1_rate">Rate Recipe 1 star</string>
+        <string name="star_2_rate">Rate Recipe 2 star</string>
+        <string name="star_3_rate">Rate Recipe 3 star</string>
+        <string name="star_4_rate">Rate Recipe 4 star</string>
+        <string name="star_5_rate">Rate Recipe 5 star</string>
+        <string name="amount_of_ratings_placeholder">X reviews</string>
+        <string name="star_singular">star</string>
+        <string name="star_plural">stars</string>
+        <string name="rate_recipe_toast">You rate this recipe </string>
+        <string name="rerate_recipe_toast">You change your rating to </string>
+
+    <!-- new recipe page -->
+    <string name="new_recipe_title">New Recipe</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="new_ingredient">Add New Ingredient</string>
+    <string name="recipe">Recipe</string>
+    <string name="enter_recipe_instructions">Enter Recipe Instructions</string>
+    <string name="save_recipe">Save Recipe</string>
+    <string name="delete_recipe">Delete Recipe</string>
+    <string name="new_ingredient_hint" />
+    <string name="add_recipe">add recipe</string>
+    <string name="review_singular">review</string>
+    <string name="review_plural">reviews</string>
+
+    <!-- recipe results page -->
+    <string name="search_results_ingredients">Recipes with following ingredients:</string>
+
+    <string-array name="sort_options">
+        <item>Sort by Time Ascending</item>
+        <item>Sort by Time Descending</item>
+        <item>Sort by Calories Ascending</item>
+        <item>Sort by Calories Descending</item>
+    </string-array>
+
+    <!-- shopping list page -->
+    <string name="page_title_shopping_list">Your Shopping List</string>
+    <string name="add_item">Add Item</string>
+    <string name="edit_ingredient">Edit this Ingredient</string>
+    <string name="ingredient_placeholder">Ingredient</string>
+
+    <!-- dialogs -->
+    <string name="dialog_title">Dialog Tittle</string>
+    <string name="dialog_message">Dialog Message</string>
+    <string name="dialog_button_positive">OK</string>
+    <string name="dialog_button_negative">Cancel</string>
+    <string name="dialog_button_save">Save</string>
+    <string name="dialog_button_delete">Delete</string>
+
+    <string name="dialog_title_choose">What do you want to do?</string>
+
+    <string name="dialog_button_negative_filters">Clear</string>
+
+    <string name="dialog_hint_enter_value">Enter Value</string>
+
+    <string name="dialog_title_choose_diet">Choose Diet</string>
+    <string name="dialog_title_choose_health">Choose Health Preferences</string>
+    <string name="dialog_title_choose_cuisine">Choose Cuisine Type</string>
+    <string name="dialog_title_choose_meal">Choose Meal Type</string>
+    <string name="dialog_title_choose_time">Select Max Time</string>
+    <string name="dialog_title_choose_dish">Choose Dish Type</string>
+    
+    <string name="dialog_title_profile_photo_change_profile_picture">Change Profile Picture</string>
+    <string name="dialog_option_profile_photo_choose_photo_from_gallery">Choose from Gallery</string>
+    <string name="dialog_option_profile_photo_delete_photo">Remove Photo</string>
+    <string name="dialog_message_profile_photo_change_confirm">Are you sure you want to update your profile picture?</string>
+
+    <string name="dialog_title_recipe_details_show_additional_info">Diet &amp; Health Tags</string>
+    <string name="dialog_message_recipe_details_diet_tags">Diet Labels:</string>
+    <string name="dialog_message_recipe_details_health_tags">Health Labels:</string>
+    <string name="dialog_title_recipe_details_nutritional_info">Nutritional Info:</string>
+    <string name="dialog_message_recipe_details_co2_emission">CO2 Emissions Class:</string>
+
+    <string name="dialog_title_edit_recipe_add_ingredient">Add Ingredient</string>
+    <string name="dialog_title_edit_recipe_edit_ingredient">Edit Ingredient</string>
+
+    <string name="dialog_comment_title">Write a Comment</string>
+    <string name="dialog_comment_edit_title">Edit Comment</string>
+    <string name="dialog_comment_edit_hint">Comment</string>
+
+    <string name="dialog_title_shopping_list_remove_recipe_confirm">Delete List</string>
+    <string name="dialog_message_shopping_list_remove_recipe_confirm">Are you sure you want to delete this shopping list?</string>
+
+    <string name="generating_recipe">Generating recipe...</string>
+    <string name="identifying_ingredients">Identifying ingredients...</string>
+
+    <string name="toggle_manual_input_ingredient">Ingredient not listed?</string>
+    <string name="toggle_dropdown_list_ingredient">Ingredient not listed?</string>
+
+    <string name="ingredient_dropdown_hint">Choose Ingredient</string>
+    <string name="ingredient_manual_input_hint">Enter Ingredient Name</string>
+    <string name="ingredient_input_hint">Ingredient Name</string>
+    <string name="ingredient_quantity_label">Quantity</string>
+    <string name="ingredient_weight_label">Weight (g)</string>
+    <string name="ingredient_unit_hint">Unit (e.g., grams, cups)</string>
+
+    <!-- errors -->
+    <string name="no_ingredients_or_filter">Please enter an ingredient or select at least one filter</string>
+    <string name="empty_ingredient_name">Please fill in the ingredient name.</string>
+    <string name="invalid_username">Please enter a valid username</string>
+    <string name="invalid_number">Please enter a valid number</string>
+    <string name="comment_empty_error">Comment cannot be empty.</string>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/CenteredLayoutStyle"
+    android:padding="0dp"
+    android:orientation="vertical">
+
+    <!-- Scrollable layout on the middle -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingVertical="16dp" >
+
+            <!-- Frame for circular avatar with border and overlay button -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:shapeAppearance="@style/RoundCardAppearance"
+                android:layout_marginBottom="16dp">
+
+                <!-- Profile picture with circular mask applied -->
+                <ImageView
+                    android:id="@+id/user_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/profile"
+                    android:scaleType="centerCrop" />
+
+                <!-- Change photo button on top of avatar, covering full width -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/change_photo_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:text="@string/change_photo"
+                    android:textSize="16sp"
+                    android:textColor="@color/text_primary"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/half_transparent_button"
+                    app:icon="@drawable/ic_camera"
+                    app:iconSize="26dp"
+                    app:iconGravity="textStart"
+                    app:iconTint="@color/text_primary"
+                    app:iconPadding="8dp"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:visibility="gone" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Username with edit icon button -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/username"
+                style="@style/PrimaryTextViewStyle"
+                android:text="@string/login"
+                android:textSize="24sp" />
+
+            <!-- User email -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/user_email"
+                style="@style/SecondaryTextViewStyle"
+                android:layout_marginTop="12dp"
+                android:text="@string/email_example"
+                android:visibility="gone" />
+
+            <!-- Logout button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/logout_button"
+                style="@style/SecondaryActionButtonStyle"
+                android:text="@string/logout"
+                android:layout_marginTop="8dp"
+                android:visibility="gone" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/user_recipes_section"
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Navbar pinned to the bottom -->
+    <include
+        layout="@layout/bottom_navigation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,207 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Top Layout -->
+    <LinearLayout
+        android:id="@+id/search_top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:gravity="center_horizontal">
+
+        <!-- Input for ingredients -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutRoundedStyle"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/ingredient_input"
+                style="@style/EditTextPrimaryStyle"
+                android:textSize="14sp"
+                android:hint="@string/insert_ingredients_default"
+                android:drawableEnd="@drawable/ic_food_apple"
+                android:drawableTint="@color/text_secondary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Left Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_new_recipe_button"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary"
+                android:drawableEnd="@drawable/ic_plus"
+                android:drawableTint="@color/text_primary"
+                style="@style/ButtonStyle" />
+
+            <!-- Main Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/image_options_button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/primary"
+                android:text="@string/image_option_button"
+                android:drawableEnd="@drawable/ic_camera"
+                android:drawableTint="@color/text_primary"
+                android:layout_marginHorizontal="4dp"
+                android:drawablePadding="2dp"
+                android:textSize="16sp"
+                style="@style/ButtonStyle" />
+
+            <!-- Right Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/filters_button"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/primary"
+                android:drawableEnd="@drawable/ic_filter"
+                android:drawableTint="@color/text_primary"
+                style="@style/ButtonStyle" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recipe_sections_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <ScrollView
+            android:id="@+id/filers_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <!-- Switch Layout -->
+            <GridLayout
+                android:background="@color/secondary_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:rowCount="2"
+                android:layout_gravity="top" >
+
+                <!-- Diet Filter -->
+                <LinearLayout
+                    style="@style/FilterContainerStyle" >
+
+                    <TextView
+                        style="@style/FilterTextViewStyle"
+                        android:text="@string/diet_filter" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/diet_filter"
+                        style="@style/ButtonStyle"
+                        android:maxLines="2"
+                        android:text="@string/filter_default" />
+                </LinearLayout>
+
+                <!-- Health Preferences Filter -->
+                <LinearLayout
+                    style="@style/FilterContainerStyle" >
+
+                    <TextView
+                        style="@style/FilterTextViewStyle"
+                        android:text="@string/health_filter" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/health_filter"
+                        style="@style/ButtonStyle"
+                        android:maxLines="2"
+                        android:text="@string/filter_default" />
+                </LinearLayout>
+
+                <!-- Cuisine Type Filter -->
+                <LinearLayout
+                    style="@style/FilterContainerStyle" >
+
+                    <TextView
+                        style="@style/FilterTextViewStyle"
+                        android:text="@string/cuisine_filter" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/cuisine_filter"
+                        style="@style/ButtonStyle"
+                        android:maxLines="2"
+                        android:text="@string/filter_default" />
+                </LinearLayout>
+
+                <!-- Meal Type Filter -->
+                <LinearLayout
+                    style="@style/FilterContainerStyle" >
+
+                    <TextView
+                        style="@style/FilterTextViewStyle"
+                        android:text="@string/meal_filter" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/meal_type_filter"
+                        style="@style/ButtonStyle"
+                        android:maxLines="2"
+                        android:text="@string/filter_default" />
+                </LinearLayout>
+
+                <!-- Max Time Filter -->
+                <LinearLayout
+                    style="@style/FilterContainerStyle" >
+
+                    <TextView
+                        style="@style/FilterTextViewStyle"
+                        android:text="@string/time_filter" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/max_time_filter"
+                        style="@style/ButtonStyle"
+                        android:maxLines="2"
+                        android:text="@string/filter_default" />
+                </LinearLayout>
+
+                <!-- Dish Type Filter -->
+                <LinearLayout
+                    style="@style/FilterContainerStyle" >
+
+                    <TextView
+                        style="@style/FilterTextViewStyle"
+                        android:text="@string/dish_filter" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/dish_type_filter"
+                        style="@style/ButtonStyle"
+                        android:maxLines="2"
+                        android:text="@string/filter_default" />
+                </LinearLayout>
+            </GridLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    <include
+        android:id="@+id/bottom_navigation"
+        layout="@layout/bottom_navigation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

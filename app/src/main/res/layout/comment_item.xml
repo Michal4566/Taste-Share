@@ -1,0 +1,83 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Avatar in rounded frame -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        app:shapeAppearance="@style/RoundCardAppearance"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_gravity="top">
+
+        <ImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/profile"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/user_avatar" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Comment Content -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- User's Name and Edit Icon Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- User's Name -->
+            <TextView
+                android:id="@+id/comment_user_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/username"
+                style="@style/PrimaryTextViewStyle"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Edit Icon -->
+            <ImageView
+                android:id="@+id/edit_user_comment_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_pencil"
+                app:tint="@color/accent"
+                android:layout_marginStart="8dp"
+                android:contentDescription="@string/edit_comment"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Comment Text in rounded background -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/primary"
+            app:cardElevation="0dp"
+            app:shapeAppearance="@style/RoundedCardAppearance"
+            android:padding="8dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lorem_ipsum_1"
+                android:textColor="@color/text_secondary"
+                android:layout_gravity="center"
+                android:padding="12dp" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</LinearLayout>

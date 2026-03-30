@@ -1,0 +1,103 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        style="@style/CenteredLayoutStyle"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/logo_drawable"
+            android:layout_gravity="center" />
+
+        <com.google.android.material.textview.MaterialTextView
+            style="@style/MainTextViewStyle"
+            android:text="@string/app_name"
+            android:textSize="40sp"
+            android:layout_marginBottom="20dp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutRoundedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_username"
+                style="@style/EditTextPrimaryStyle"
+                android:drawableStart="@drawable/ic_user"
+                android:drawableTint="@color/text_secondary"
+                android:drawablePadding="12sp"
+                android:hint="@string/login" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutRoundedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_email"
+                style="@style/EditTextPrimaryStyle"
+                android:hint="@string/email"
+                android:drawableStart="@drawable/ic_email"
+                android:drawableTint="@color/text_secondary"
+                android:drawablePadding="12sp"
+                android:inputType="textEmailAddress" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutRoundedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_password"
+                style="@style/EditTextPrimaryStyle"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawableTint="@color/text_secondary"
+                android:drawablePadding="12sp"
+                android:hint="@string/password"
+                android:inputType="textPassword"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutRoundedStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/register_password_repeat"
+                style="@style/EditTextPrimaryStyle"
+                android:drawableStart="@drawable/ic_lock"
+                android:drawableTint="@color/text_secondary"
+                android:drawablePadding="12sp"
+                android:hint="@string/password_repeat"
+                android:inputType="textPassword" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register_button"
+            style="@style/ActionButtonStyle"
+            android:text="@string/sign_in"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/back_to_login"
+            style="@style/SecondaryTextViewStyle"
+            android:text="@string/back_to_login"
+            android:layout_marginBottom="16dp" />
+
+    </LinearLayout>
+
+</ScrollView>

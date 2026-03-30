@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Ingredient Dropdown with Search -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayoutRoundedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ingredient_dropdown_hint"
+        app:endIconMode="dropdown_menu">
+
+        <AutoCompleteTextView
+            android:id="@+id/ingredient_name_dropdown"
+            style="@style/EditTextPrimaryStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:completionThreshold="1"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Quantity Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayoutRoundedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ingredient_quantity_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ingredient_quantity_field"
+            style="@style/EditTextPrimaryStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Unit Field -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayoutRoundedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ingredient_unit_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/ingredient_unit_field"
+            style="@style/EditTextPrimaryStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

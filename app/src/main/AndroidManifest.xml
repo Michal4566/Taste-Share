@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StartingTheme"
+        tools:targetApi="31"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TasteShareTheme">
+        </activity>
+
+        <activity
+            android:name=".StartActivity"
+            android:exported="true"
+            android:theme="@style/Theme.StartingTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".OnboardingActivity"
+            android:theme="@style/Theme.TasteShareTheme"/>
+
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TasteShareTheme">
+        </activity>
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TasteShareTheme">
+        </activity>
+
+        <activity
+            android:name=".SearchActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TasteShareTheme">
+        </activity>
+
+        <activity
+            android:name=".RecipeResultsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TasteShareTheme">
+        </activity>
+
+        <activity
+            android:name=".RecipeDetailActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            android:theme="@style/Theme.TasteShareTheme">
+        </activity>
+
+        <activity
+            android:name=".RecipeGeneratedActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TasteShareTheme">
+        </activity>
+
+        <activity
+            android:name=".ShoppingListActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TasteShareTheme">
+        </activity>
+
+        <activity
+            android:name=".FavoritesResultsActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TasteShareTheme">
+        </activity>
+
+        <activity
+            android:name=".FavoriteDetailActivity"
+            android:exported="true"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"
+            android:theme="@style/Theme.TasteShareTheme">
+        </activity>
+
+        <activity
+            android:name=".EditRecipeActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TasteShareTheme">
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,32 @@
+# --- Android / Gradle build output ---
+.gradle/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# --- Local machine config (never commit) ---
+local.properties
+app/google-services.json
+
+# --- Secrets / keys (common patterns) ---
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+*.der
+*.crt
+secrets.properties
+secrets.local.properties
+.env
+.env.*
+
+# --- IDE files (Android Studio / IntelliJ) ---
+.idea/
+*.iml
+
+# --- OS / temporary files ---
+.DS_Store
+Thumbs.db
+*.tmp

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- TextInputLayout for numerical input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/value_input_layout"
+        style="@style/TextInputLayoutRoundedStyle"
+        android:layout_width="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/value_input_field"
+            style="@style/EditTextPrimaryStyle"
+            android:hint="@string/dialog_hint_enter_value"
+            android:inputType="number"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- TextView to display the unit (e.g., min or kcal) -->
+    <TextView
+        android:id="@+id/unit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="16dp"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="?attr/colorOnSurface" />
+</LinearLayout>
