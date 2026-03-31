@@ -62,8 +62,6 @@ It demonstrates practical end-to-end mobile development: authentication, data fl
 
 ## 🎥 Demo
 
-## 🎥 Demo (wideo)
-
 <video src="demo/TasteShare.mp4" controls width="100%"></video>
 [Kliknij, aby obejrzeć demo](demo/TasteShare.mp4)
 
