@@ -62,7 +62,7 @@ It demonstrates practical end-to-end mobile development: authentication, data fl
 
 ## 🎥 Demo
 
-https://github.com/Michal4566/Taste-Share/blob/main/demo/TasteShare.mp4
+https://raw.githubusercontent.com/Michal4566/Taste-Share/main/demo/TasteShare.mp4
 
 ## Learning Goals
 
